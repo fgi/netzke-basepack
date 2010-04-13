@@ -298,9 +298,10 @@ module Netzke
               }
             END_OF_JAVASCRIPT
   
+            # I18n for confirmation message
             :on_del => <<-END_OF_JAVASCRIPT.l,
               function() {
-                Ext.Msg.confirm('Confirm', 'Are you sure?', function(btn){
+                Ext.Msg.confirm('#{I18n.t(:confirm)}', '#{I18n.t(:sure)}', function(btn){
                   if (btn == 'yes') {
                     var records = [];
                     this.getSelectionModel().each(function(r){

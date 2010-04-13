@@ -251,13 +251,21 @@ module Netzke
     def actions
       # Defaults
       { 
-        :add          => {:text => 'Add',     :disabled      => ext_config[:prohibit_create]},
-        :edit         => {:text => 'Edit',    :disabled      => true},
-        :del          => {:text => 'Delete',  :disabled      => true},
-        :apply        => {:text => 'Apply',   :disabled      => ext_config[:prohibit_update] && ext_config[:prohibit_create]},
-        :add_in_form  => {:text => 'Add in form', :disabled  => !ext_config[:enable_edit_in_form]},
-        :edit_in_form => {:text => 'Edit in form', :disabled => true},
-        :search       => {:text => 'Search', :disabled       => !ext_config[:enable_extended_search], :checked => true}
+        # I18n
+        # :add          => {:text => 'Add',     :disabled      => ext_config[:prohibit_create]},
+        # :edit         => {:text => 'Edit',    :disabled      => true},
+        # :del          => {:text => 'Delete',  :disabled      => true},
+        # :apply        => {:text => 'Apply',   :disabled      => ext_config[:prohibit_update] && ext_config[:prohibit_create]},
+        # :add_in_form  => {:text => 'Add in form', :disabled  => !ext_config[:enable_edit_in_form]},
+        # :edit_in_form => {:text => 'Edit in form', :disabled => true},
+        # :search       => {:text => 'Search', :disabled       => !ext_config[:enable_extended_search], :checked => true}
+        :add          => {:text => I18n.t(:action_add),     :disabled      => ext_config[:prohibit_create]},
+        :edit         => {:text => I18n.t(:action_edit),    :disabled      => true},
+        :del          => {:text => I18n.t(:action_del),  :disabled      => true},
+        :apply        => {:text => I18n.t(:action_apply),   :disabled      => ext_config[:prohibit_update] && ext_config[:prohibit_create]},
+        :add_in_form  => {:text => I18n.t(:action_add_in_form), :disabled  => !ext_config[:enable_edit_in_form]},
+        :edit_in_form => {:text => I18n.t(:action_edit_in_form), :disabled => true},
+        :search       => {:text => I18n.t(:action_search), :disabled       => !ext_config[:enable_extended_search], :checked => true}
       }
     end
 

@@ -1,0 +1,20 @@
+#Netzke Basepack English translations
+
+en:
+  busy: "Busy..."
+  ready: "Ready"
+  deleted_records: "Deleted {{count}} record(s)"
+  delete_denied: "You don't have permissions to delete data"
+  confirm: "Confirm"
+  sure: "Are you sure?" 
+  ok: "OK"
+  cancel: "Cancel"
+  edit: "Edit"
+  
+  action_add: "Add"
+  action_edit: "Edit"
+  action_del: "Delete"
+  action_apply: "Apply"
+  action_add_in_form: "Add in form"
+  action_edit_in_form: "Edit in form"
+  action_search: "Search"

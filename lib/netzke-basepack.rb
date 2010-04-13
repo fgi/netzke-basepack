@@ -35,3 +35,6 @@ Netzke::Base.config[:external_css] << "/extjs/examples/ux/fileuploadfield/css/fi
 # Used by GridPanel
 Netzke::Base.config[:external_css] << "/extjs/examples/ux/gridfilters/css/RangeMenu"
 Netzke::Base.config[:external_css] << "/extjs/examples/ux/gridfilters/css/GridFilters"
+
+# I18n : add path to translation files 
+I18n.load_path += Dir["#{File.dirname(__FILE__)}/netzke/locale/*.{rb,yml}"]

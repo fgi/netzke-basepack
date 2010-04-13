@@ -63,8 +63,11 @@ module Netzke
         :region => 'south',
         :height => 22,
         :statusAlign => 'right',
-        :busyText => 'Busy...',
-        :default_text => masq.nil? ? "Ready #{"(config mode)" if session[:config_mode]}" : "Masquerading as #{masq}",
+        # I18n
+        #:busyText => 'Busy...',
+        # :default_text => masq.nil? ? "Ready #{"(config mode)" if session[:config_mode]}" : "Masquerading as #{masq}",
+        :busyText => I18n.t(:busy),
+        :default_text => masq.nil? ? "#{I18n.t(:ready)} #{"(config mode)" if session[:config_mode]}" : "Masquerading as #{masq}",
         :default_icon_cls => ""
       }]
     end

@@ -37,9 +37,13 @@ module Netzke
         if !ext_config[:prohibit_delete]
           record_ids = ActiveSupport::JSON.decode(params[:records])
           data_class.destroy(record_ids)
-          {:feedback => "Deleted #{record_ids.size} record(s)", :load_store_data => get_data}
+          # I18n
+          # {:feedback => "Deleted #{record_ids.size} record(s)", :load_store_data => get_data}
+          {:feedback => I18n.t(:deleted_records, :count => record_ids.size), :load_store_data => get_data}
         else
-          {:feedback => "You don't have permissions to delete data"}
+          # I18n
+          # {:feedback => "You don't have permissions to delete data"}
+          {:feedback => I18n.t(:delete_denied)}
         end
       end
 
